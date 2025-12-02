@@ -313,6 +313,7 @@ generate_static_system() {
 	uci -q batch <<-EOF
 		delete system.@system[0]
 		add system system
+		###修改主机名
 		#set system.@system[-1].hostname='ImmortalWRT'
 		set system.@system[-1].hostname='LoLoWRT'
 		set system.@system[-1].timezone='CST-8'
